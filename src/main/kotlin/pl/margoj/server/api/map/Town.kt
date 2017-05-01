@@ -34,4 +34,10 @@ interface Town
      * Mape kolizji.
      * Każdy element w tej tablicy reprezentuje jedną kratke na mape
      */
-    val collisions: Array<BooleanArray> }
+    val collisions: Array<BooleanArray>
+
+    /**
+     * Status PvP na aktualnej mapie
+     */
+    val pvp: PvPStatus
+}
