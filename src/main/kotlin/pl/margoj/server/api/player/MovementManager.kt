@@ -2,6 +2,9 @@ package pl.margoj.server.api.player
 
 import pl.margoj.server.api.map.Location
 
+/**
+ * Menedżer ruchu, przypisany do danego gracza
+ */
 interface MovementManager
 {
     /**

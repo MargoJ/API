@@ -2,7 +2,9 @@ package pl.margoj.server.api.commands
 
 import pl.margoj.server.api.chat.ChatMessage
 
-
+/**
+ * Reprezentuje wszystko co może wykonać komende (konsola, gracz, zdalny executor)
+ */
 interface CommandSender
 {
     /**

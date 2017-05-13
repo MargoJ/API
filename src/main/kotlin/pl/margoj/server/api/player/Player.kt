@@ -5,6 +5,9 @@ import pl.margoj.server.api.commands.CommandSender
 import pl.margoj.server.api.entity.Entity
 import pl.margoj.server.api.map.Location
 
+/**
+ * Reprezentuje gracza online na serwerze
+ */
 interface Player : Entity, CommandSender
 {
     /**

@@ -2,6 +2,9 @@ package pl.margoj.server.api.entity
 
 import pl.margoj.server.api.map.Location
 
+/**
+ * Reprezentuje Entity (byt) w grze (npc, gracze)
+ */
 interface Entity
 {
     /**

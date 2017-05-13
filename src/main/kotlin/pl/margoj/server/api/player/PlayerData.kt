@@ -1,5 +1,8 @@
 package pl.margoj.server.api.player
 
+/**
+ * Podstawowe informacje o danym graczu
+ */
 interface PlayerData
 {
     /**

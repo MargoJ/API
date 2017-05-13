@@ -1,5 +1,8 @@
 package pl.margoj.server.api.player
 
+/**
+ * Menedżer walut, przypisany do danego gracza
+ */
 interface CurrencyManager
 {
     /**

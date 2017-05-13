@@ -2,10 +2,28 @@ package pl.margoj.server.api.utils
 
 import java.util.regex.Pattern
 
+/**
+ * Funkcje pomocnicze do złota
+ */
 object GoldUtils
 {
     private val pattern = Pattern.compile("([\\d,.]+)(k|m|kk|g|mm|kkk)?")
 
+    /**
+     * Parsuje string z złotem do longa
+     *
+     * np.
+     *
+     * 1k -> 1 000
+     *
+     * 5m -> 5 000 000
+     *
+     * 7g -> 7 000 000 000
+     *
+     * @param str string ze zlotem
+     *
+     * @return calkowita ilosc zlot
+     */
     fun parseGold(str: String): Long?
     {
         val matcher = pattern.matcher(str)

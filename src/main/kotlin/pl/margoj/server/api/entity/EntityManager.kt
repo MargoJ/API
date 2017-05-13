@@ -2,6 +2,9 @@ package pl.margoj.server.api.entity
 
 import pl.margoj.server.api.player.Player
 
+/**
+ * Menedżer entity
+ */
 interface EntityManager
 {
     /**

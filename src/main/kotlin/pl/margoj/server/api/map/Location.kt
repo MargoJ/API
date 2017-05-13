@@ -1,5 +1,8 @@
 package pl.margoj.server.api.map
 
+/**
+ * Reprezentuje lokacje w grze
+ */
 open class Location(
         /**
          * Mapa aktualnej kolacji
@@ -78,6 +81,15 @@ open class Location(
         location.y = this.y
     }
 
+    /**
+     * Zwraca dokładną odległość pomiędzy aktualną lokacją z podaną lokacją podniesioną do kwadratu
+     * Funkcja ta powinna być używana tylko wtedy gry potrzebna jest dokładna lokacja.
+     * Do porównań należy używać szybszek funkcji [distanceSquared]
+     *
+     * @param location lokacja do której odległość ma być zmierzona
+     *
+     * @return dokładna odległość
+     */
     fun distance(location: Location): Int
     {
         return Math.sqrt(this.distanceSquared(location).toDouble()).toInt()
@@ -85,11 +97,10 @@ open class Location(
 
     /**
      * Zwraca odległość pomiędzy aktualną lokacją z podaną lokacją podniesioną do kwadratu
-     * Funkcja ta jest znacznie szybsza od [.distance] i powinna byc używana jeżeli dokładna wartość nie musi być znana.
+     * Funkcja ta jest znacznie szybsza od [distance] i powinna byc używana jeżeli dokładna wartość nie musi być znana.
 
      * @param location lokacja do której odległość ma być zmierzona
-     * *
-     * *
+     *
      * @return odległość podniesiona do kwadratu
      */
     fun distanceSquared(location: Location): Int

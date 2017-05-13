@@ -1,5 +1,8 @@
 package pl.margoj.server.api.map
 
+/**
+ * [Location] której wartośći są stałe
+ */
 class ImmutableLocation(town: Town?, x: Int, y: Int) : Location(town, x, y)
 {
     override var town: Town?

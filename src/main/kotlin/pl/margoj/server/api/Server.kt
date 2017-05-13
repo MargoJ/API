@@ -9,6 +9,9 @@ import pl.margoj.server.api.player.Player
 import pl.margoj.server.api.sync.Scheduler
 import pl.margoj.server.api.sync.Ticker
 
+/**
+ * Reprezentuje serwer gry i zapewnia podstawowe metody
+ */
 interface Server
 {
     /**
@@ -73,5 +76,8 @@ interface Server
      */
     fun shutdown()
 
+    /**
+     * Głównny logger serwera
+     */
     val logger: Logger
 }

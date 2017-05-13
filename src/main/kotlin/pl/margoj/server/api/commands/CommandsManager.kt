@@ -1,5 +1,8 @@
 package pl.margoj.server.api.commands
 
+/**
+ * Menedżer komend
+ */
 interface CommandsManager
 {
     /**

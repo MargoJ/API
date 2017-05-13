@@ -3,11 +3,22 @@ package pl.margoj.server.api.utils
 import org.apache.commons.lang3.Validate
 import java.util.Random
 
+/**
+ * Funkcje pomocnicze do stringow
+ */
 object StringUtils
 {
     private val DEFAULT_POOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789".toCharArray()
     private val random = Random()
 
+    /**
+     * Losuje string o podanej wielkosc i puli znakow (domyslnie [DEFAULT_POOL])
+     *
+     * @param size wielkość striga
+     * @param pool pula znaków
+     *
+     * @return wylosowany string
+     */
     fun randomString(size: Int, pool: CharArray = DEFAULT_POOL): String
     {
         Validate.isTrue(size >= 0, "Size can't be negative or zero")
