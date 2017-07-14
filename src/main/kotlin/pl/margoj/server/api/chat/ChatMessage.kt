@@ -2,6 +2,7 @@ package pl.margoj.server.api.chat
 
 import com.google.gson.annotations.SerializedName
 import pl.margoj.server.api.utils.TimeUtils
+import java.math.BigDecimal
 
 /**
  * Reprezentuje wiadomość jaka może być wysłana do gracza
@@ -13,7 +14,7 @@ data class ChatMessage @JvmOverloads constructor(
         @SerializedName("t") val text: String,
 
         /**
-         * [Type] ]wiadomości
+         * [Type] wiadomości
          */
         @SerializedName("k") val type: Int? = null,
 
@@ -40,7 +41,7 @@ data class ChatMessage @JvmOverloads constructor(
         /**
          * Data wysłania wiadomośći
          */
-        @SerializedName("ts") val timestamp: Double? = TimeUtils.getTimestampDouble()
+        @SerializedName("ts") val timestamp: BigDecimal? = BigDecimal.valueOf(TimeUtils.getTimestampDouble())
 )
 {
     companion object Type
