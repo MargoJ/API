@@ -3,6 +3,7 @@ package pl.margoj.server.api.player
 import pl.margoj.server.api.Server
 import pl.margoj.server.api.commands.CommandSender
 import pl.margoj.server.api.entity.Entity
+import pl.margoj.server.api.inventory.player.PlayerInventory
 import pl.margoj.server.api.map.Location
 
 /**
@@ -33,6 +34,11 @@ interface Player : Entity, CommandSender
      * Dane aktualnego gracza
      */
     val data: PlayerData
+
+    /**
+     * Ekwipunek gracza
+     */
+    val inventory: PlayerInventory
 
     /**
      * Pokazuje wiadomość w oknie alertu
