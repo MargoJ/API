@@ -4,6 +4,8 @@ import org.apache.logging.log4j.Logger
 import pl.margoj.server.api.chat.ChatManager
 import pl.margoj.server.api.commands.CommandsManager
 import pl.margoj.server.api.entity.EntityManager
+import pl.margoj.server.api.inventory.Item
+import pl.margoj.server.api.inventory.ItemStack
 import pl.margoj.server.api.map.Town
 import pl.margoj.server.api.player.Player
 import pl.margoj.server.api.sync.Scheduler
@@ -60,6 +62,11 @@ interface Server
     val towns: Collection<Town>
 
     /**
+     * Lista wszystkim przedmiotow
+     */
+    val items: Collection<Item>
+
+    /**
      * Czy serwer jest uruchomiony?
      */
     val running: Boolean
@@ -70,6 +77,18 @@ interface Server
      * @param id unikalne id
      */
     fun getTownById(id: String): Town?
+
+    /**
+     * Pobierz przedmiot za pomoca id
+     *
+     * @param id unikalne id
+     */
+    fun getItemById(id: String): Item?
+
+    /**
+     * Tworzy nową instancje [ItemStack]
+     */
+    fun newItemStack(item: Item): ItemStack
 
     /**
      * Wyłącza serwer
