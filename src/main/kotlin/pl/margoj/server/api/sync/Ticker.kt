@@ -12,9 +12,11 @@ interface Ticker
 
     val tickables: List<Tickable>
 
-    fun registerTickable(tickable: Tickable): Boolean
+    fun registerTickable(tickable: Tickable)
 
     fun unregisterTickable(tickable: Tickable): Boolean
+
+    fun tickOnce(tickable: Tickable)
 
     companion object
     {

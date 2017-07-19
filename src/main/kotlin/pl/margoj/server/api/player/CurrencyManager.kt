@@ -13,5 +13,5 @@ interface CurrencyManager
     /**
      * Ilość złota jaką gracz aktualnie posiada przy sobie
      */
-    val gold: Long
+    var gold: Long
 }

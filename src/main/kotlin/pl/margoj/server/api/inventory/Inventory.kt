@@ -24,5 +24,13 @@ interface Inventory
     /**
      * Lista wszystkich przedmiotow znajdujacych sie w ekwipunku
      */
-    val allItems: Array<ItemStack?>
+    val allItems: List<ItemStack?>
+
+    /**
+     * Pobiera item z ekwipunku uzywajac [id]
+     */
+    fun getItemstackById(id: Long): ItemStack?
+    {
+        return allItems.find { it?.id == id }
+    }
 }

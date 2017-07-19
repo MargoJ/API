@@ -22,7 +22,7 @@ interface PlayerInventory : Inventory
     /**
      * Zawartosci orby gracza
      */
-    val bagInventories: Array<PlayerBagInventory>
+    val bagInventories: List<PlayerBagInventory>
 
     /**
      * Pobiera torbe gracza, lub null gdy dany [slot] na tobre jest pusty
