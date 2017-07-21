@@ -27,11 +27,4 @@ interface MargoJConfig
     }
 
     val engineConfig: EngineConfig
-
-    interface GameConfig
-    {
-        val trackingRange: Int
-    }
-
-    val gameConfig: GameConfig
 }

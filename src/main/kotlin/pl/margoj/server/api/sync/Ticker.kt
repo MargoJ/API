@@ -18,6 +18,8 @@ interface Ticker
 
     fun tickOnce(tickable: Tickable)
 
+    fun <T> registerWaitable(runnable: () -> T): Waitable<T>
+
     companion object
     {
         val NANOS_IN_MILLI = 1_000_000L

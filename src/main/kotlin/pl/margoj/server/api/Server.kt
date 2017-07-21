@@ -4,10 +4,12 @@ import org.apache.logging.log4j.Logger
 import pl.margoj.server.api.chat.ChatManager
 import pl.margoj.server.api.commands.CommandsManager
 import pl.margoj.server.api.entity.EntityManager
+import pl.margoj.server.api.event.EventManager
 import pl.margoj.server.api.inventory.Item
 import pl.margoj.server.api.inventory.ItemStack
 import pl.margoj.server.api.map.Town
 import pl.margoj.server.api.player.Player
+import pl.margoj.server.api.plugin.PluginManager
 import pl.margoj.server.api.sync.Scheduler
 import pl.margoj.server.api.sync.Ticker
 
@@ -35,6 +37,16 @@ interface Server
      * Scheduler (harmonogram serwera)
      */
     val scheduler: Scheduler
+
+    /**
+     * Menedżer pluginów
+     */
+    val pluginManager: PluginManager
+
+    /**
+     * Menedżer eventów
+     */
+    val eventManager: EventManager
 
     /**
      * Menedżer komend
