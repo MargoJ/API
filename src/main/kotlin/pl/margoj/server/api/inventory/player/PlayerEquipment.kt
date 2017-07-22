@@ -9,6 +9,11 @@ import pl.margoj.server.api.inventory.ItemStack
 interface PlayerEquipment : Inventory
 {
     /**
+     * Zakłada item na odpowiedni slot, zwraca poprzedni item znajdujacy sie na danym slocie
+     */
+    fun tryEquip(item: ItemStack): ItemStack?
+
+    /**
      * Hełm
      */
     var helmet: ItemStack?

@@ -62,4 +62,11 @@ interface PlayerInventory : Inventory
     {
         return bagInventories[slot]
     }
+
+    /**
+     * Sprawdza czy podany item jest założaną torbą.
+     *
+     * @return zwraca null jesli item nie jest torba lub index torby jesli jest
+     */
+    fun isEquipedBag(item: ItemStack): Int?
 }

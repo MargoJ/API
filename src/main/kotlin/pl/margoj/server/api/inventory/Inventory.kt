@@ -27,6 +27,11 @@ interface Inventory
     val allItems: List<ItemStack?>
 
     /**
+     * Próbuje włożyć przedmiot do ekwipunku na pierwszym pustym slocie, i zwraca czy się udało
+     */
+    fun tryToPut(item: ItemStack): Boolean
+
+    /**
      * Pobiera item z ekwipunku uzywajac [id]
      */
     fun getItemstackById(id: Long): ItemStack?

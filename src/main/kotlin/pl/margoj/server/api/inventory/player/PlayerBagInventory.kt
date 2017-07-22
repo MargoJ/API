@@ -18,4 +18,10 @@ interface PlayerBagInventory : Inventory
      * i zwraca stary przedmiot które został podmieniony lub null gdy slot był pusty
      */
     fun setItemAt(x: Int, y: Int, item: ItemStack?): ItemStack?
+
+
+    /**
+     * Sprawdza czy ta torba jest pusta
+     */
+    fun isEmpty(): Boolean
 }
