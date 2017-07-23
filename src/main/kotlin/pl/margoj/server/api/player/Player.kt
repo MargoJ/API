@@ -1,6 +1,5 @@
 package pl.margoj.server.api.player
 
-import pl.margoj.server.api.Server
 import pl.margoj.server.api.chat.ChatMessage
 import pl.margoj.server.api.commands.CommandSender
 import pl.margoj.server.api.entity.Entity

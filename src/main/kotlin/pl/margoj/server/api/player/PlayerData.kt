@@ -8,7 +8,7 @@ interface PlayerData
     /**
      * Aktualny poziom doświadczenia gracza
      */
-    var level: Int
+    val level: Int
 
     /**
      * Aktualna ilość punktów doświadczenia gracza
@@ -18,10 +18,60 @@ interface PlayerData
     /**
      * Outfit gracza
      */
-    var icon: String
+    val icon: String
 
     /**
      * Profesja gracza
      */
     val profession: Profession
+
+    /**
+     * Punkty statystyk
+     */
+    val statPoints: Int
+
+    /**
+     * Podstawowa siła
+     */
+    val baseStrength: Int
+
+    /**
+     * Podstawowa zręczność
+     */
+    val baseAgility: Int
+
+    /**
+     * Podstawowy intelekt
+     */
+    val baseIntellect: Int
+
+    /**
+     * Siła
+     */
+    val strength: Int
+
+    /**
+     * Zręczność
+     */
+    val agility: Int
+
+    /**
+     * Intelekt
+     */
+    val intellect: Int
+
+    /**
+     * Szybkość ataku (SA)
+     */
+    val attackSpeed: Double
+
+    /**
+     * Maksymalna ilość hp gracza
+     */
+    val maxHp: Int
+
+    /**
+     * Dodaje wybraną ilość [xp]
+     */
+    fun addExp(xp: Long)
 }

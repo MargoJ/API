@@ -18,9 +18,14 @@ interface Arguments
     fun asString(i: Int): String
 
     /**
-     * Pobiera dany argument jako int, lub zwraca nulla gdy podana wartosc nie jest nullem
+     * Pobiera dany argument jako int, lub zwraca nulla gdy podana wartosc nie jest intem
      */
     fun asInt(i: Int): Int?
+
+    /**
+     * Pobiera dany argument jako int, lub zwraca nulla gdy podana wartosc nie jest longiem
+     */
+    fun asLong(i: Int): Long?
 
     /**
      * Pobiera dany argument jako gracza, lub zwraca nulla gdy dany gracz nie mógł być znaleziony

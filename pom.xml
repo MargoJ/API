@@ -53,8 +53,28 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>0.9.15</version>
+                <executions>
+                    <execution>
+                        <phase>pre-site</phase>
+                        <goals>
+                            <goal>dokka</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>kotlin-dokka</id>
+            <url>https://dl.bintray.com/kotlin/dokka/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
