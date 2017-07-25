@@ -36,6 +36,11 @@ interface Player : Entity, CommandSender
     val inventory: PlayerInventory
 
     /**
+     * Czy gracz jest aktualnie online?
+     */
+    val online: Boolean
+
+    /**
      * Pokazuje wiadomość w oknie alertu
      */
     fun displayAlert(alert: String)

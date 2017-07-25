@@ -27,4 +27,21 @@ interface MargoJConfig
     }
 
     val engineConfig: EngineConfig
+
+    interface MySQLConfig
+    {
+        val ip: String
+
+        val database: String
+
+        val username: String
+
+        val password: String
+
+        val maxConnectionPoolSize: Int
+
+        val saveIntervalSeconds: Int
+    }
+
+    val mySQLConfig: MySQLConfig
 }

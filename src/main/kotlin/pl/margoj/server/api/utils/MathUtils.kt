@@ -19,3 +19,34 @@ fun Double.floor(): Int
 {
     return Math.floor(this).toInt()
 }
+
+fun Int.fastPow2(): Int
+{
+    return this * this
+}
+
+fun Int.fastPow3(): Int
+{
+    return this * this * this
+}
+
+fun Int.fastPow4(): Int
+{
+    return this * this * this * this
+}
+
+fun Long.fastPow2(): Long
+{
+    return this * this
+}
+
+fun Long.fastPow3(): Long
+{
+    return this * this * this
+}
+
+fun Long.fastPow4(): Long
+{
+    return this * this * this * this
+}
+
