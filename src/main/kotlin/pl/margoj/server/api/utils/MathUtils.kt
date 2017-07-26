@@ -1,5 +1,7 @@
 package pl.margoj.server.api.utils
 
+import java.math.BigDecimal
+
 infix fun Double.pow(exponent: Double): Double
 {
     return Math.pow(this, exponent)
@@ -50,3 +52,7 @@ fun Long.fastPow4(): Long
     return this * this * this * this
 }
 
+fun Double.toBigDecimal(): BigDecimal
+{
+    return BigDecimal(this).setScale(2, BigDecimal.ROUND_HALF_UP)
+}
