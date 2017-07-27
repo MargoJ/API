@@ -20,6 +20,8 @@ interface Ticker
 
     fun <T> registerWaitable(runnable: () -> T): Waitable<T>
 
+    fun runAsync(runnable: Runnable)
+
     companion object
     {
         val NANOS_IN_MILLI = 1_000_000L
