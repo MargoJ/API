@@ -1,5 +1,7 @@
 package pl.margoj.server.api.map
 
+import pl.margoj.server.api.inventory.map.MapInventory
+
 /**
  * Reprezentuje miasto (mape) w grze.
  */
@@ -40,4 +42,9 @@ interface Town
      * Status PvP na aktualnej mapie
      */
     val pvp: PvPStatus
+
+    /**
+     * Ekwipunek mapy, zawiera wszystkie przedmioty lezace na ziemii na danej mapie
+     */
+    val inventory: MapInventory
 }
