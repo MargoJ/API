@@ -39,4 +39,10 @@ interface CommandsManager
      * @return czy cokolwiek bylo odrejestrowane
      */
     fun unregisterAll(owner: MargoJPlugin<*>): Boolean
+
+    /**
+     * Pobiera liste wszystkich zarejestrowanych komend
+     * Klucz - nazwa komendy, wartość - lista aliasów
+     */
+    fun getAllCommands(): Map<String, Collection<String>>
 }

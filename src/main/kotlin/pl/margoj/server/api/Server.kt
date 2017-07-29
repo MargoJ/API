@@ -3,6 +3,7 @@ package pl.margoj.server.api
 import org.apache.logging.log4j.Logger
 import pl.margoj.server.api.chat.ChatManager
 import pl.margoj.server.api.commands.CommandsManager
+import pl.margoj.server.api.commands.ConsoleCommandSender
 import pl.margoj.server.api.entity.EntityManager
 import pl.margoj.server.api.event.EventManager
 import pl.margoj.server.api.inventory.Item
@@ -52,6 +53,11 @@ interface Server
      * Menedżer komend
      */
     val commandsManager: CommandsManager
+
+    /**
+     * Konsola serwera
+     */
+    val consoleCommandSender: ConsoleCommandSender
 
     /**
      * Menedżer entity

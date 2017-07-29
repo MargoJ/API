@@ -13,6 +13,11 @@ interface CommandSender
     val server: Server
 
     /**
+     * Nazwa sndera
+     */
+    val name: String
+
+    /**
      * Wysyła wiadomość do sendera
      *
      * @param message wiadomość
