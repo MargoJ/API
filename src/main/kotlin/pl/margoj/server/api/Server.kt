@@ -25,6 +25,11 @@ interface Server
     val version: String
 
     /**
+     * Nazwa serwaera
+     */
+    val name: String
+
+    /**
      * Konfiguracja serwera
      */
     val config: MargoJConfig
