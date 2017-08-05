@@ -16,4 +16,9 @@ interface EntityManager
      * Lista wszystkich graczy znajdujących się aktualnie na serwerze
      */
     val players: Collection<Player>
+
+    /**
+     * Pobiera entity uzywajac ID
+     */
+    fun getEntityById(id: Int): Entity?
 }

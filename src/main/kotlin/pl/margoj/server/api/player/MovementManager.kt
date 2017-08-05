@@ -16,4 +16,9 @@ interface MovementManager
      * Lokacja w jakiej gracz się znajduje
      */
     val location: Location
+
+    /**
+     * Czy gracz może się teraz poruszać
+     */
+    val canMove: Boolean
 }

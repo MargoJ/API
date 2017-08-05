@@ -41,10 +41,15 @@ open class Location(
             return true
         }
 
-        val xDiffers = Math.abs(location.x - this.x) == 1
-        val yDiffers = Math.abs(location.y - this.y) == 1
+        val xDifference = Math.abs(location.x - this.x)
+        val yDifference = Math.abs(location.y - this.y)
 
-        return if (diagonals) (xDiffers || yDiffers) else ((xDiffers && !yDiffers) || (yDiffers && !xDiffers))
+        if (diagonals && xDifference == 1 && yDifference == 1)
+        {
+            return true
+        }
+
+        return (xDifference == 1 && yDifference == 0) || (xDifference == 0 && yDifference == 1)
     }
 
     /**
