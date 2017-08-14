@@ -32,6 +32,14 @@ interface Inventory
     fun tryToPut(item: ItemStack): Boolean
 
     /**
+     * Sprawdza czy gracz posiada podany przedmiot
+     */
+    fun contains(item: Item): Boolean
+    {
+        return this.allItems.any { it?.item == item }
+    }
+
+    /**
      * Pobiera item z ekwipunku uzywajac [id]
      */
     fun getItemstackById(id: Long): ItemStack?
