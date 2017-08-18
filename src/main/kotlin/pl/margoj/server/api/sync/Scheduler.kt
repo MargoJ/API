@@ -1,6 +1,23 @@
 package pl.margoj.server.api.sync
 
-interface Scheduler : Tickable
+import pl.margoj.server.api.plugin.MargoJPlugin
+
+interface Scheduler
 {
-    // TODO
+    /**
+     * Tworzy nowy builder [TaskBuilder]
+     *
+     * @param plugin plugin który tworzy taska
+     */
+    fun task(plugin: MargoJPlugin<*>): TaskBuilder
+
+    /**
+     * Anuluje task o podanym [id]
+     */
+    fun cancelTask(id: Int)
+
+    /**
+     * Anuluje wszystkie taski zarejestrowane przez dany [plugin]
+     */
+    fun cancelAll(plugin: MargoJPlugin<*>)
 }
