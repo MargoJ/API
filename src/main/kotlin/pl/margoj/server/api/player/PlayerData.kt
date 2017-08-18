@@ -1,5 +1,7 @@
 package pl.margoj.server.api.player
 
+import java.util.Date
+
 /**
  * Podstawowe informacje o danym graczu
  */
@@ -69,6 +71,16 @@ interface PlayerData
      * Maksymalna ilość hp gracza
      */
     val maxHp: Int
+
+    /**
+     * Wyczerpanie gracza (w minutach)
+     */
+    val ttl: Int
+
+    /**
+     * Data respawnu gracza, może być nullem gdy gracz jest żywy
+     */
+    val deadUntil: Date?
 
     /**
      * Dodaje wybraną ilość [xp]
