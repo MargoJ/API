@@ -2,9 +2,6 @@ package pl.margoj.server.api.sync
 
 /**
  * Builder dla tasków
- *
- * @see AsyncTaskBuilder
- * @see SyncTaskBuilder
  */
 interface TaskBuilder
 {
