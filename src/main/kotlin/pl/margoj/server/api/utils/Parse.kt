@@ -2,7 +2,8 @@ package pl.margoj.server.api.utils
 
 object Parse
 {
-    @JvmOverloads fun parseByte(value: String?, radix: Int = 10): Byte?
+    @JvmOverloads
+    fun parseByte(value: String?, radix: Int = 10): Byte?
     {
         if (value == null || value.isEmpty() || value.length > 4)
         {
@@ -13,7 +14,8 @@ object Parse
         return if (output == null || output > Byte.MAX_VALUE || output < Byte.MIN_VALUE) null else output.toByte()
     }
 
-    @JvmOverloads fun parseShort(value: String?, radix: Int = 10): Short?
+    @JvmOverloads
+    fun parseShort(value: String?, radix: Int = 10): Short?
     {
         if (value == null || value.isEmpty() || value.length > 6)
         {
@@ -24,7 +26,8 @@ object Parse
         return if (output == null || output > Short.MAX_VALUE || output < Short.MIN_VALUE) null else output.toShort()
     }
 
-    @JvmOverloads fun parseInt(value: String?, radix: Int = 10): Int?
+    @JvmOverloads
+    fun parseInt(value: String?, radix: Int = 10): Int?
     {
         if (value == null || value.isEmpty() || value.length > 11 || radix < Character.MIN_RADIX || radix > Character.MAX_RADIX)
         {
@@ -80,7 +83,8 @@ object Parse
         return if (negative) result else -result
     }
 
-    @JvmOverloads fun parseLong(value: String?, radix: Int = 10): Long?
+    @JvmOverloads
+    fun parseLong(value: String?, radix: Int = 10): Long?
     {
         if (value == null || value.isEmpty() || value.length > 20 || radix < Character.MIN_RADIX || radix > Character.MAX_RADIX)
         {

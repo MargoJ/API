@@ -27,7 +27,7 @@ object GoldUtils
     fun parseGold(str: String): Long?
     {
         val matcher = pattern.matcher(str)
-        if(!matcher.matches())
+        if (!matcher.matches())
         {
             return null
         }
@@ -43,7 +43,8 @@ object GoldUtils
             return null
         }
 
-        when(modifier) {
+        when (modifier)
+        {
             "k" -> return Math.floor(number * 1_000f).toLong()
             "m", "kk" -> return Math.floor(number * 1_000_000f).toLong()
             "g", "mm", "kkk" -> return Math.floor(number * 1_000_000_000f).toLong()

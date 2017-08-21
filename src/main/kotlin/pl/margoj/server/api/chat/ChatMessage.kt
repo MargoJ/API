@@ -1,6 +1,7 @@
 package pl.margoj.server.api.chat
 
 import com.google.gson.annotations.SerializedName
+import pl.margoj.server.api.chat.ChatMessage.Type
 import pl.margoj.server.api.utils.TimeUtils
 import java.math.BigDecimal
 
