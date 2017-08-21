@@ -22,12 +22,12 @@ abstract class MargoJPlugin<P : MargoJPlugin<P>>
     protected fun registerListener(constructor: (P) -> EventListener)
     {
         @Suppress("UNCHECKED_CAST")
-        this.server.eventManager.register(this, constructor(this as P));
+        this.server.eventManager.register(this, constructor(this as P))
     }
 
     protected fun registerCommand(constructor: (P) -> CommandListener, vararg commands: String)
     {
         @Suppress("UNCHECKED_CAST")
-        this.server.commandsManager.registerListener(this, constructor(this as P), *commands);
+        this.server.commandsManager.registerListener(this, constructor(this as P), *commands)
     }
 }

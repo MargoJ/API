@@ -147,17 +147,11 @@ object Parse
         {
             return null
         }
-        if (value.equals("true", ignoreCase = true))
+        return when
         {
-            return true
-        }
-        else if (value.equals("false", ignoreCase = true))
-        {
-            return false
-        }
-        else
-        {
-            return null
+            value.equals("true", ignoreCase = true) -> true
+            value.equals("false", ignoreCase = true) -> false
+            else -> null
         }
     }
 }

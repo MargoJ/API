@@ -34,7 +34,7 @@ interface PlayerInventory : Inventory
      */
     fun getBag(slot: Int): ItemStack?
     {
-        return this.get(9 + slot);
+        return this[9 + slot]
     }
 
     /**

@@ -20,6 +20,6 @@ class ListFromMap<T>(val map: MutableMap<Int, T>, override val size: Int) : Abst
 
     override fun get(index: Int): T
     {
-        return this.map.get(index) as T
+        return this.map[index] as T
     }
 }
