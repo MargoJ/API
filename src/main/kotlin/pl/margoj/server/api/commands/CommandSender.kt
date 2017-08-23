@@ -24,6 +24,18 @@ interface CommandSender
      */
     fun sendMessage(message: String, messageSeverity: MessageSeverity = MessageSeverity.LOG)
 
+    /**
+     * Ustawia aktualne zadanie do potwierdzenia za pomoca komendy .confirm i wysyla wiadomosc
+     */
+    fun addConfirmationTask(task: (CommandSender) -> Unit, message: String)
+
+    /**
+     * Wykonuje aktualny confirmation task
+     *
+     * @see addConfirmationTask
+     */
+    fun executeConfirmationTask(): Boolean
+
     enum class MessageSeverity(val packet: String)
     {
         LOG("n"),

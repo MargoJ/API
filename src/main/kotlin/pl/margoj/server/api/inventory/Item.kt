@@ -9,4 +9,9 @@ interface Item
      * Unikalne ID przedmiotu
      */
     val id: String
+
+    /**
+     * Wyświetlana nazwa przedmiotu
+     */
+    val name: String
 }
