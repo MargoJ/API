@@ -33,6 +33,26 @@ interface Town
     val height: Int
 
     /**
+     * Czy ta mapa jest głównym miastem?
+     */
+    val isTown: Boolean
+
+    /**
+     * Czy ta mapa jest główna?
+     */
+    val isMain: Boolean
+
+    /**
+     * Nadrzedna mapa, lub null gdy ta mapa jest główna
+     */
+    val parentMap: Town?
+
+    /**
+     * Lokalizacja spawnu, gdzie gracz trafi po śmierci na tej mapie
+     */
+    val respawnMap: Town
+
+    /**
      * Mape kolizji.
      * Każdy element w tej tablicy reprezentuje jedną kratke na mape
      */
