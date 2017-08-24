@@ -118,9 +118,7 @@ open class Location(
     override fun equals(other: Any?): Boolean
     {
         if (this === other) return true
-        if (other?.javaClass != javaClass) return false
-
-        other as Location
+        if (other !is Location) return false
 
         if (town != other.town) return false
         if (x != other.x) return false
