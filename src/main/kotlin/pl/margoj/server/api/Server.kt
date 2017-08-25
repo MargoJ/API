@@ -122,4 +122,9 @@ interface Server
      * Głównny logger serwera
      */
     val logger: Logger
+
+    /**
+     * Logger do logowania informacji o grze
+     */
+    val gameLogger: Logger
 }

@@ -139,4 +139,10 @@ open class Location(
     {
         return "Location(town=$town, x=$x, y=$y)"
     }
+
+
+    fun toSimpleString(): String
+    {
+        return """${if (town != null) ("${town!!.id}[${town!!.name}]") else "NULL"}, x = $x, y = $y"""
+    }
 }
