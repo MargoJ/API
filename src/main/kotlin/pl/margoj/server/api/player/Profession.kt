@@ -40,24 +40,10 @@ enum class Profession(val id: Char)
 
     companion object
     {
+        @JvmStatic
         fun getById(id: Char): Profession?
         {
             return Profession.values().firstOrNull { it.id == id }
-        }
-    }
-
-    class JsonAdapter : JsonSerializer<Profession>, JsonDeserializer<Profession>
-    {
-        override fun serialize(src: Profession?, typeOfSrc: Type?, context: JsonSerializationContext?): JsonElement? = if (src == null) null else JsonPrimitive(src.id)
-
-        override fun deserialize(json: JsonElement?, typeOfT: Type?, context: JsonDeserializationContext?): Profession?
-        {
-            if (json == null || !json.isJsonPrimitive || !json.asJsonPrimitive.isString)
-            {
-                return null
-            }
-            val str = json.asString
-            return if (str.length != 1) null else Profession.getById(str[0])
         }
     }
 }

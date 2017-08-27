@@ -33,7 +33,7 @@ interface TaskBuilder
     /**
      * Opóźnij o [seconds] sekind
      */
-    fun delaySeconds(seconds: Int): TaskBuilder
+    fun delaySeconds(seconds: Double): TaskBuilder
 
     /**
      * Powtarzaj co [ticks] ticków
@@ -43,7 +43,7 @@ interface TaskBuilder
     /**
      * Powtarzaj co [seconds] sekund
      */
-    fun repeatSeconds(seconds: Int): TaskBuilder
+    fun repeatSeconds(seconds: Double): TaskBuilder
 
     /**
      * Dodaje taska do schedulera

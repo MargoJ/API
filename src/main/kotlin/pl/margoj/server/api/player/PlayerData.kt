@@ -1,17 +1,13 @@
 package pl.margoj.server.api.player
 
+import pl.margoj.server.api.battle.BattleStats
 import java.util.Date
 
 /**
  * Podstawowe informacje o danym graczu
  */
-interface PlayerData
+interface PlayerData : BattleStats
 {
-    /**
-     * Aktualny poziom doświadczenia gracza
-     */
-    val level: Int
-
     /**
      * Aktualna ilość punktów doświadczenia gracza
      */
@@ -23,9 +19,14 @@ interface PlayerData
     val icon: String
 
     /**
-     * Profesja gracza
+     * Ilość punktów życia postaci
      */
-    val profession: Profession
+    var hp: Int
+
+    /**
+     * Płeć postaci
+     */
+    val gender: Gender
 
     /**
      * Punkty statystyk
@@ -46,31 +47,6 @@ interface PlayerData
      * Podstawowy intelekt
      */
     val baseIntellect: Int
-
-    /**
-     * Siła
-     */
-    val strength: Int
-
-    /**
-     * Zręczność
-     */
-    val agility: Int
-
-    /**
-     * Intelekt
-     */
-    val intellect: Int
-
-    /**
-     * Szybkość ataku (SA)
-     */
-    val attackSpeed: Double
-
-    /**
-     * Maksymalna ilość hp gracza
-     */
-    val maxHp: Int
 
     /**
      * Wyczerpanie gracza (w minutach)
