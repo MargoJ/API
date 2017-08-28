@@ -13,7 +13,12 @@ enum class Gender(val id: Char)
     /**
      * Kobieta
      */
-    FEMALE('k');
+    FEMALE('k'),
+
+    /**
+     * Unknown
+     */
+    UNKNOWN('x');
 
     companion object
     {

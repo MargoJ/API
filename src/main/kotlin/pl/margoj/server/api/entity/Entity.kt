@@ -3,6 +3,7 @@ package pl.margoj.server.api.entity
 import pl.margoj.server.api.Server
 import pl.margoj.server.api.battle.BattleStats
 import pl.margoj.server.api.map.Location
+import pl.margoj.server.api.player.Gender
 
 /**
  * Reprezentuje Entity (byt) w grze (npc, gracze)
@@ -33,6 +34,11 @@ interface Entity
      * Poziom entity
      */
     val level: Int
+
+    /**
+     * Płeć entity
+     */
+    val gender: Gender
 
     /**
      * Grafika entit
