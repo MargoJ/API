@@ -59,6 +59,11 @@ interface PlayerData : BattleStats
     val deadUntil: Date?
 
     /**
+     * Czy gracz jest martwy?
+     */
+    val isDead: Boolean
+
+    /**
      * Dodaje wybraną ilość [xp]
      */
     fun addExp(xp: Long)
