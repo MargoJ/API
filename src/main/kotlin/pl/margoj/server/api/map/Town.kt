@@ -53,10 +53,16 @@ interface Town
     val respawnMap: Town
 
     /**
-     * Mape kolizji.
+     * Mapa kolizji.
      * Każdy element w tej tablicy reprezentuje jedną kratke na mape
      */
     val collisions: Array<BooleanArray>
+
+    /**
+     * Mapa poziomu wody na mapie.
+     * Każdy element w tej tablicy reprezentuje jedną kratke na mape
+     */
+    val water: Array<IntArray>
 
     /**
      * Status PvP na aktualnej mapie
