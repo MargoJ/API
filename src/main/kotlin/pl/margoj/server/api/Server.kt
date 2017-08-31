@@ -138,4 +138,14 @@ interface Server
      * Logger do logowania informacji o grze
      */
     val gameLogger: Logger
+
+    /**
+     * Player lub null, gdy offline
+     */
+    fun getPlayer(name: String): Player?
+
+    /**
+     * Player lub null, gdy offline
+     */
+    fun getPlayer(id: Int): Player?
 }
