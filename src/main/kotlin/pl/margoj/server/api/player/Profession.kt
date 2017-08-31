@@ -1,8 +1,5 @@
 package pl.margoj.server.api.player
 
-import com.google.gson.*
-import java.lang.reflect.Type
-
 /**
  * Reprezentuje profesje gracza w grze
  */

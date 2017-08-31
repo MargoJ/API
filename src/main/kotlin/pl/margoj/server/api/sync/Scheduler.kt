@@ -2,6 +2,9 @@ package pl.margoj.server.api.sync
 
 import pl.margoj.server.api.plugin.MargoJPlugin
 
+/**
+ * Harmonogram serwera, zarządza taskami
+ */
 interface Scheduler
 {
     /**

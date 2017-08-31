@@ -2,6 +2,7 @@ package pl.margoj.server.api.utils
 
 object Parse
 {
+    @JvmStatic
     @JvmOverloads
     fun parseByte(value: String?, radix: Int = 10): Byte?
     {
@@ -14,6 +15,7 @@ object Parse
         return if (output == null || output > Byte.MAX_VALUE || output < Byte.MIN_VALUE) null else output.toByte()
     }
 
+    @JvmStatic
     @JvmOverloads
     fun parseShort(value: String?, radix: Int = 10): Short?
     {
@@ -26,6 +28,7 @@ object Parse
         return if (output == null || output > Short.MAX_VALUE || output < Short.MIN_VALUE) null else output.toShort()
     }
 
+    @JvmStatic
     @JvmOverloads
     fun parseInt(value: String?, radix: Int = 10): Int?
     {
@@ -83,6 +86,7 @@ object Parse
         return if (negative) result else -result
     }
 
+    @JvmStatic
     @JvmOverloads
     fun parseLong(value: String?, radix: Int = 10): Long?
     {
@@ -140,11 +144,13 @@ object Parse
         return if (negative) result else -result
     }
 
+    @JvmStatic
     fun parseChar(value: String?): Char?
     {
         return if (value != null && value.length == 1) value[0] else null
     }
 
+    @JvmStatic
     fun parseBoolean(value: String?): Boolean?
     {
         if (value == null || value.length > 5 || value.length < 4)

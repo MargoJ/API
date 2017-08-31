@@ -1,6 +1,7 @@
 package pl.margoj.server.api.entity
 
 import pl.margoj.server.api.Server
+import pl.margoj.server.api.battle.Battle
 import pl.margoj.server.api.battle.BattleStats
 import pl.margoj.server.api.map.Location
 import pl.margoj.server.api.player.Gender
@@ -64,6 +65,11 @@ interface Entity
      * Statystyki entity
      */
     val stats: BattleStats
+
+    /**
+     * Walka w jakiej znajduje sie entity
+     */
+    val currentBattle: Battle?
 
     /**
      * Zadaje [amount] obrażeń temu entity

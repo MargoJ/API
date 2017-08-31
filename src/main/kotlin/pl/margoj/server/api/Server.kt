@@ -4,6 +4,7 @@ import org.apache.logging.log4j.Logger
 import pl.margoj.server.api.chat.ChatManager
 import pl.margoj.server.api.commands.CommandsManager
 import pl.margoj.server.api.commands.ConsoleCommandSender
+import pl.margoj.server.api.entity.Entity
 import pl.margoj.server.api.entity.EntityManager
 import pl.margoj.server.api.event.EventManager
 import pl.margoj.server.api.inventory.Item
@@ -25,7 +26,7 @@ interface Server
     val version: String
 
     /**
-     * Nazwa serwaera
+     * Nazwa serwera
      */
     val name: String
 
@@ -112,6 +113,16 @@ interface Server
      * Tworzy nową instancje [ItemStack]
      */
     fun newItemStack(item: Item): ItemStack
+
+    /**
+     * Rozpoczyna nową walke pomiędzy dwoma drużynami
+     *
+     * @param teamA drużyna pierwsza, zazwyczaj drużyna atakująca
+     * @param teamB drużyna druga
+     *
+     * @throws BattleUnableToStartException gdy walka nie może być rozpoczęta
+     */
+    fun startBattle(teamA: List<Entity>, teamB: List<Entity>)
 
     /**
      * Wyłącza serwer

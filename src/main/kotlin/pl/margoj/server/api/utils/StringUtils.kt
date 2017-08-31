@@ -19,6 +19,7 @@ object StringUtils
      *
      * @return wylosowany string
      */
+    @JvmStatic
     fun randomString(size: Int, pool: CharArray = DEFAULT_POOL): String
     {
         Validate.isTrue(size >= 0, "Size can't be negative or zero")

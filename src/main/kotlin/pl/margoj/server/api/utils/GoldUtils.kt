@@ -24,6 +24,7 @@ object GoldUtils
      *
      * @return calkowita ilosc zlot
      */
+    @JvmStatic
     fun parseGold(str: String): Long?
     {
         val matcher = pattern.matcher(str)
