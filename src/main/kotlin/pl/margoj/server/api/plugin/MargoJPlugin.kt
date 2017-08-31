@@ -66,7 +66,7 @@ abstract class MargoJPlugin<P : MargoJPlugin<P>>
     }
 
     /*
-     * InputStream pliku z resources lub null, gdy plik nie istnieje
+     * InputStream pliku z resources
      */
     protected fun getResource(name: String): InputStream?
     {
@@ -74,7 +74,7 @@ abstract class MargoJPlugin<P : MargoJPlugin<P>>
     }
 
     /*
-     * Kopiuje plik z resources do wskazanego miejsca, jesli ten nie istnieje
+     * Kopiuje plik z resources do wskazanego miejsca, jeśli ten nie istnieje
      */
     protected fun saveResource(name: String)
     {
