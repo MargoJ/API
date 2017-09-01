@@ -65,7 +65,7 @@ abstract class MargoJPlugin<P : MargoJPlugin<P>>
         this.server.commandsManager.registerListener(this, constructor(this as P), *commands)
     }
 
-    /*
+    /**
      * InputStream pliku z resources
      */
     protected fun getResource(name: String): InputStream?
@@ -73,7 +73,7 @@ abstract class MargoJPlugin<P : MargoJPlugin<P>>
         return Files.asByteSource(File("plugins/${this.annotation.name}/$name")).openStream()
     }
 
-    /*
+    /**
      * Kopiuje plik z resources do wskazanego miejsca, jeśli ten nie istnieje
      */
     protected fun saveResource(name: String)
@@ -94,7 +94,7 @@ abstract class MargoJPlugin<P : MargoJPlugin<P>>
         }
     }
 
-    /*
+    /**
      * Kopiuje plik z resources do wskazanego miejsca, nadpisujac poprzedni
      */
     protected fun copyResource(name: String, file: File)
@@ -109,4 +109,9 @@ abstract class MargoJPlugin<P : MargoJPlugin<P>>
             ex.printStackTrace()
         }
     }
+
+    /**
+     * Folder przeznaczony na pliki pluginu; konfiguracje, itd.
+     */
+    val dataFolder: File = File("plugins/${this.annotation.name}")
 }
