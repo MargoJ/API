@@ -8,9 +8,9 @@ import pl.margoj.server.api.player.Player
 interface EntityManager
 {
     /**
-     * Lista wszystkich entity znajdujących się aktualnie na serwerze
+     * Lista wszystkich NPC znajdujących się aktualnie na serwerze
      */
-    val entities: Collection<Entity>
+    val npcs: Collection<Entity>
 
     /**
      * Lista wszystkich graczy znajdujących się aktualnie na serwerze
@@ -18,7 +18,17 @@ interface EntityManager
     val players: Collection<Player>
 
     /**
-     * Pobiera entity uzywajac ID
+     * Lista wszystkich entity znajdujących się aktualnie na serwerze
      */
-    fun getEntityById(id: Int): Entity?
+    val entities: Collection<Entity>
+
+    /**
+     * Pobiera gracza uzywajac ID
+     */
+    fun getPlayerById(id: Int): Player?
+
+    /**
+     * Pobiera NPC uzywajac ID
+     */
+    fun getNpcById(id: Int): Entity?
 }

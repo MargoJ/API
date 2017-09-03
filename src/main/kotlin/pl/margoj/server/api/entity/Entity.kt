@@ -13,11 +13,6 @@ import java.util.Date
 interface Entity
 {
     /**
-     * Unikalny identyfikator dla entity
-     */
-    val id: Int
-
-    /**
      * Serwer entity
      */
     val server: Server
@@ -86,4 +81,9 @@ interface Entity
      * Zadaje [amount] obrażeń temu entity
      */
     fun damage(amount: Int)
+
+    /**
+     * Zabiaj entity na domyślną ilośc czasu
+     */
+    fun kill()
 }

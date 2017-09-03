@@ -12,6 +12,11 @@ import pl.margoj.server.api.map.Location
 interface Player : Entity, CommandSender
 {
     /**
+     * Unikalny identyfikator gracza
+     */
+    val id: Int
+
+    /**
      * Menadżer ruchu przypisany do aktualnego gracza
      *
      * @see MovementManager

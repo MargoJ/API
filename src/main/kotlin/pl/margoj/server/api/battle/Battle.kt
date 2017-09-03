@@ -25,17 +25,17 @@ interface Battle
     /**
      * Lista wszystkich uczestników walki
      */
-    val participants: List<Entity>
+    val participants: Collection<Entity>
 
     /**
      * Lista osób w drużynie pierwszej
      */
-    val teamA: List<Entity>
+    val teamA: Collection<Entity>
 
     /**
      * Lista osób w drużynie drugiej
      */
-    val teamB: List<Entity>
+    val teamB: Collection<Entity>
 
     /**
      * Pobiera zwyciężce, lub zwraca nulla gdy walka jest nierozsztygnięta
