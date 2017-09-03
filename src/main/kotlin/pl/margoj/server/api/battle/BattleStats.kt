@@ -18,6 +18,11 @@ interface BattleStats
     val profession: Profession
 
     /**
+     * Podstawowe obrażenia
+     */
+    val damage: IntRange
+
+    /**
      * Siła
      */
     val strength: Int
