@@ -101,3 +101,8 @@ object TimeFormatUtils
         return out.toString()
     }
 }
+
+fun String.toTime(): Long
+{
+    return TimeFormatUtils.parseTime(this)
+}
