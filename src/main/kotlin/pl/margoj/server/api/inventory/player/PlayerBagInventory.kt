@@ -19,9 +19,13 @@ interface PlayerBagInventory : Inventory
      */
     fun setItemAt(x: Int, y: Int, item: ItemStack?): ItemStack?
 
-
     /**
      * Sprawdza czy ta torba jest pusta
      */
     fun isEmpty(): Boolean
+
+    /**
+     * Sprawdza czy ta torba jest pełna
+     */
+    fun isFull(): Boolean
 }

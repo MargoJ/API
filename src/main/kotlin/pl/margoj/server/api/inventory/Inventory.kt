@@ -34,9 +34,17 @@ interface Inventory
     /**
      * Sprawdza czy gracz posiada podany przedmiot
      */
-    fun contains(item: Item): Boolean
+    operator fun contains(item: Item): Boolean
     {
         return this.allItems.any { it?.item == item }
+    }
+
+    /**
+     * Sprawdza czy gracz posiada podany itemstack
+     */
+    operator fun contains(item: ItemStack): Boolean
+    {
+        return this.allItems.any { it == item }
     }
 
     /**
