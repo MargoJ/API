@@ -23,6 +23,21 @@ interface BattleStats
     val damage: IntRange
 
     /**
+     * Pancerz
+     */
+    val armor: Int
+
+    /**
+     * Blok
+     */
+    val block: Int
+
+    /**
+     * Unik
+     */
+    val evade: Int
+
+    /**
      * Siła
      */
     val strength: Int
