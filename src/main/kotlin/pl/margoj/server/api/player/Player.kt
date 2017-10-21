@@ -36,6 +36,11 @@ interface Player : Entity, CommandSender
     val data: PlayerData
 
     /**
+     * Ranga gracza
+     */
+    val rank: PlayerRank
+
+    /**
      * Ekwipunek gracza
      */
     val inventory: PlayerInventory
