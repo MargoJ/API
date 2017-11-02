@@ -73,4 +73,9 @@ interface Town
      * Ekwipunek mapy, zawiera wszystkie przedmioty lezace na ziemii na danej mapie
      */
     val inventory: MapInventory
+
+    /**
+     * Spawn point mapy
+     */
+    val spawnPoint: ImmutableLocation
 }

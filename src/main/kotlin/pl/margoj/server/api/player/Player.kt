@@ -5,6 +5,7 @@ import pl.margoj.server.api.commands.CommandSender
 import pl.margoj.server.api.entity.Entity
 import pl.margoj.server.api.inventory.player.PlayerInventory
 import pl.margoj.server.api.map.Location
+import pl.margoj.server.api.map.Town
 
 /**
  * Reprezentuje gracza online na serwerze
@@ -74,4 +75,9 @@ interface Player : Entity, CommandSender
      * Teleportuje gracza do wybranej lokacji
      */
     fun teleport(location: Location)
+
+    /**
+     * Teleportuje gracza na wybraną mape
+     */
+    fun teleport(map: Town)
 }
