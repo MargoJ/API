@@ -12,8 +12,9 @@ interface PlayerEquipment : Inventory
      * Zakłada item na odpowiedni slot, zwraca poprzedni item znajdujacy sie na danym slocie
      *
      * @throws ItemRequirementsNotMetException gdy gracz nie spełnia wymagań danego przedmiotu
+     * @throws ItemIsOnCooldownException gdy przedmiot nie moze byc uzyty z powodu istniejecego cooldownu
      */
-    @Throws(ItemRequirementsNotMetException::class)
+    @Throws(ItemRequirementsNotMetException::class, ItemIsOnCooldownException::class)
     fun use(item: ItemStack): ItemStack?
 
     /**

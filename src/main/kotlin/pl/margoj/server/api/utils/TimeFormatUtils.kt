@@ -43,12 +43,12 @@ object TimeFormatUtils
      * Zamienia milisekundy w czytelny format np 62000 -> 1 minuta 2 sekundy
      */
     @JvmStatic
-    fun getReadableTime(time: Long): String
+    fun getReadableTime(time: Long, accusative: Boolean = false): String
     {
         val out = StringBuilder()
         var seconds = time / 1000L
 
-        fun processTimePart(convert: (Long) -> Long, unit: TimeUnit, form1: String, form2: String, form3: String)
+        fun processTimePart(convert: (Long) -> Long, unit: TimeUnit, form1: String, form2: String, form3: String, accusativeForm: String)
         {
             val converted = convert(seconds)
 
@@ -57,7 +57,7 @@ object TimeFormatUtils
                 out.append(converted).append(" ")
                 if (converted == 1L)
                 {
-                    out.append(form1)
+                    out.append(if(accusative) accusativeForm else form1)
                 }
                 else
                 {
@@ -88,10 +88,10 @@ object TimeFormatUtils
             }
         }
 
-        processTimePart(TimeUnit.SECONDS::toDays, TimeUnit.DAYS, "dzień", "dni", "dni")
-        processTimePart(TimeUnit.SECONDS::toHours, TimeUnit.HOURS, "godzina", "godziny", "godzin")
-        processTimePart(TimeUnit.SECONDS::toMinutes, TimeUnit.MINUTES, "minuta", "minuty", "minut")
-        processTimePart({ it }, TimeUnit.SECONDS, "sekunda", "sekundy", "sekund")
+        processTimePart(TimeUnit.SECONDS::toDays, TimeUnit.DAYS, "dzień", "dni", "dni", "dzień")
+        processTimePart(TimeUnit.SECONDS::toHours, TimeUnit.HOURS, "godzina", "godziny", "godzin", "godzinę")
+        processTimePart(TimeUnit.SECONDS::toMinutes, TimeUnit.MINUTES, "minuta", "minuty", "minut", "minutę")
+        processTimePart({ it }, TimeUnit.SECONDS, "sekunda", "sekundy", "sekund", "sekundę")
 
         if (out.isNotEmpty())
         {

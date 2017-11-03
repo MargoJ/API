@@ -17,4 +17,14 @@ interface ItemStack
      * Unikalne ID przedmiotu
      */
     val id: Long
+
+    /**
+     * Niszczy ten przedmiot
+     */
+    fun destroyItem()
+
+    /**
+     * Kopiuje wszystkie wlasciwosci z podanego ItemStacka
+     */
+    fun cloneFrom(other: ItemStack)
 }
