@@ -2,7 +2,7 @@ package pl.margoj.server.api.player
 
 import pl.margoj.server.api.chat.ChatMessage
 import pl.margoj.server.api.commands.CommandSender
-import pl.margoj.server.api.entity.Entity
+import pl.margoj.server.api.entity.LivingEntity
 import pl.margoj.server.api.inventory.player.PlayerInventory
 import pl.margoj.server.api.map.Location
 import pl.margoj.server.api.map.Town
@@ -10,7 +10,7 @@ import pl.margoj.server.api.map.Town
 /**
  * Reprezentuje gracza online na serwerze
  */
-interface Player : Entity, CommandSender
+interface Player : LivingEntity, CommandSender
 {
     /**
      * Unikalny identyfikator gracza

@@ -4,8 +4,8 @@ import org.apache.logging.log4j.Logger
 import pl.margoj.server.api.chat.ChatManager
 import pl.margoj.server.api.commands.CommandsManager
 import pl.margoj.server.api.commands.ConsoleCommandSender
-import pl.margoj.server.api.entity.Entity
 import pl.margoj.server.api.entity.EntityManager
+import pl.margoj.server.api.entity.LivingEntity
 import pl.margoj.server.api.event.EventManager
 import pl.margoj.server.api.inventory.Item
 import pl.margoj.server.api.inventory.ItemStack
@@ -122,7 +122,7 @@ interface Server
      *
      * @throws BattleUnableToStartException gdy walka nie może być rozpoczęta
      */
-    fun startBattle(teamA: List<Entity>, teamB: List<Entity>)
+    fun startBattle(teamA: List<LivingEntity>, teamB: List<LivingEntity>)
 
     /**
      * Wyłącza serwer
