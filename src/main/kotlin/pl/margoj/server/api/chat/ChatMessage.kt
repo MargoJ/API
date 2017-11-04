@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName
 import pl.margoj.server.api.chat.ChatMessage.Type
 import pl.margoj.server.api.utils.TimeUtils
 import java.math.BigDecimal
+import java.util.concurrent.atomic.AtomicInteger
 
 /**
  * Reprezentuje wiadomość jaka może być wysłana do gracza
@@ -17,12 +18,12 @@ data class ChatMessage @JvmOverloads constructor(
         /**
          * [Type] wiadomości
          */
-        @SerializedName("k") val type: Int? = null,
+        @SerializedName("k") val type: Int = 0,
 
         /**
-         * Nazwa gracza który wysłał daną wiadomośc, może być nullem
+         * Nazwa gracza który wysłał daną wiadomośc
          */
-        @SerializedName("n") val nickname: String? = null,
+        @SerializedName("n") val nickname: String = "",
 
         /**
          * Cel wiadomości, tylko w wiadomośćiach prywatnych
@@ -42,7 +43,7 @@ data class ChatMessage @JvmOverloads constructor(
         /**
          * Data wysłania wiadomośći
          */
-        @SerializedName("ts") val timestamp: BigDecimal? = BigDecimal.valueOf(TimeUtils.getTimestampDouble())
+        @SerializedName("ts") val timestamp: BigDecimal = BigDecimal.valueOf(TimeUtils.getTimestampDouble())
 )
 {
     companion object Type
@@ -51,5 +52,19 @@ data class ChatMessage @JvmOverloads constructor(
         const val TYPE_CLAN = 1
         const val TYPE_TEAM = 2
         const val TYPE_PRIV = 3
+
+        private val counter = AtomicInteger()
+    }
+
+    val id = counter.incrementAndGet()
+
+    override fun equals(other: Any?): Boolean
+    {
+        return other is ChatMessage && other.id == this.id
+    }
+
+    override fun hashCode(): Int
+    {
+        return this.id
     }
 }
