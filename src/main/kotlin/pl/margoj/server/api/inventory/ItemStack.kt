@@ -1,12 +1,13 @@
 package pl.margoj.server.api.inventory
 
 import pl.margoj.server.api.Server
+import pl.margoj.server.api.battle.DamageSource
 
 /**
  * Reprezentuje przedmiot w ekwipunku, ktore moze byc wysylany do gracza,
  * może być stworzoyny używając [Server.newItemStack]
  */
-interface ItemStack
+interface ItemStack : DamageSource
 {
     /**
      * Przedmiot
