@@ -90,7 +90,7 @@ abstract class MargoJPlugin<P : MargoJPlugin<P>>
         catch (ex: IOException)
         {
             this.logger.error("Błąd podczas zapisywania zasobu '$name'!")
-            ex.printStackTrace();
+            ex.printStackTrace()
         }
     }
 

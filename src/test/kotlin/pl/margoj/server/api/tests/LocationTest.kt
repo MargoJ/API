@@ -20,7 +20,6 @@ class LocationTest
         Assert.assertTrue("Original location hasn't been changed", loc1.x == 55 && loc1.y == 12)
         Assert.assertTrue("Cloned location has been changed", loc2.x == 1 && loc2.y == 2)
         Assert.assertTrue("Cloned immutable location has been changed", loc3.x == 1 && loc3.y == 2)
-        Assert.assertTrue("Cloned immutable location isn't immutable", loc3 is ImmutableLocation)
 
         loc1.copyValuesTo(loc2)
 

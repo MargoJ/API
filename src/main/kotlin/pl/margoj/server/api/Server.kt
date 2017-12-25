@@ -120,7 +120,7 @@ interface Server
      * @param teamA drużyna pierwsza, zazwyczaj drużyna atakująca
      * @param teamB drużyna druga
      *
-     * @throws BattleUnableToStartException gdy walka nie może być rozpoczęta
+     * @throws pl.margoj.server.api.battle.BattleUnableToStartException gdy walka nie może być rozpoczęta
      */
     fun startBattle(teamA: List<LivingEntity>, teamB: List<LivingEntity>)
 
